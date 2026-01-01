@@ -116,14 +116,14 @@ static int __init dt_fstab_proc_init(void)
 
 	strcpy(systemblockdevice, "/dev/block/mmcblk0p37");
 	strcpy(vendorblockdevice, "/dev/block/mmcblk0p38");
-	strcpy(modemblockdevice, "/dev/block/mmcblk0p36");
+	strcpy(firmwareblockdevice, "/dev/block/mmcblk0p36");
 	strcpy(persistblockdevice, "/dev/block/mmcblk0p13");
 	strcpy(drmblockdevice, "/dev/block/mmcblk0p34");
 	strcpy(snsblockdevice, "/dev/block/mmcblk0p30");
 	strcpy(mptblockdevice, "/dev/block/mmcblk0p35");
 	DT_PARTITION_CREATE(system)
 	DT_PARTITION_CREATE(vendor)
-	DT_PARTITION_CREATE(modem)
+	DT_PARTITION_CREATE(firmware)
 	DT_PARTITION_CREATE(persist)
 	DT_PARTITION_CREATE(drm)
 	DT_PARTITION_CREATE(sns)
@@ -149,4 +149,5 @@ module_exit(dt_fstab_proc_exit);
 
 MODULE_DESCRIPTION("Android fstab driver");
 MODULE_AUTHOR("Paul Keith <javelinanddart@gmail.com>");
+
 MODULE_LICENSE("GPL");
